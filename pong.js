@@ -11,7 +11,9 @@ canvas.height = height;
 var context = canvas.getContext('2d');
 
 window.onload = () => {
-    document.body.appendChild(canvas);
+    div = document.getElementById('canvas-container')
+    div.appendChild(canvas)
+    document.body.appendChild(div);
     animate(step);
 };
 
