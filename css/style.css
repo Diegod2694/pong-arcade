@@ -1,7 +1,34 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(./../theme/04B_30__.TTF);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(./../theme/Falcon\ Patrol.ttf);
+}
+@font-face {
+    font-family: myThirdFont;
+    src: url(./../theme/Fipps-Regular.otf);
+}
+
+/*
+    background-banner: #272264;
+    background-font:  #F16146;
+    background-font-border:  #B7452D;
+    banner-border:  #F8F282;
+    body-background: #343432;
+    black'background: #141124;
+*/
+
+body {
+    /* font-family: myFirstFont; */
+    background-color: #141124 !important;
+}
+
 .background-color {
-    background-color: rgb(84, 1, 122);
-    border-bottom: 5px solid yellow;
-    border-top: 5px solid yellow;
+    background-color: #272264;
+    border-bottom: 5px solid  #F8F282;
+    border-top: 5px solid  #F8F282;
     padding: 10px 0 10px 0;
 }
 
@@ -10,6 +37,8 @@
     width: 300px;
     height: 110px;
     border: 7px solid orangered;
+    font-family: mySecondFont;
+    /* color: white; */
 }
 
 .marginless {
@@ -21,4 +50,93 @@
     height: 70vh;
     display: flex;
     justify-content: center;
+}
+
+.escape {
+    font-family: mySecondFont;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px !important;
+}
+
+.arcade-title {
+    font-size: 30px;
+    margin-bottom: 1px;
+    margin-top: 7px;
+}
+
+.pong {
+    font-size: 20px;
+}
+
+.menu {
+    font-family: mySecondFont;
+    /* border: 1px solid black; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px;
+}
+
+.menu a {
+    margin-top: 15px;
+}
+
+.menu h1 {
+    color: orange;
+    margin: 15px;
+}
+.history {
+    font-family: mySecondFont;
+    /* border: 1px solid black; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px;
+}
+
+.history h1 {
+    color: orange;
+    margin: 15px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.container-author{
+    color: #FF4500;
+    color: orange;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.container-history {
+    width: 100%;
+    display: flex;}
+
+#pong {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#history-text {
+    width: 70%;
+    color: #FFA500;
+    padding: 20px;
+    margin-bottom: 20px;
 }

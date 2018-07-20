@@ -1,0 +1,15 @@
+Lineamientos para el Proyecto Final:
+
+ 
+
+ð  Pantalla Principal: Diseño propio, debe contener el nombre del juego, una breve reseña del mismo, la identificación del o los autores y un menú con las siguientes opciones:
+
+1.    Jugar: Permitirá ir a la ventana de juego
+
+2.    Estadística: Mostrara una ventana con las estadísticas básicas, juegos jugados, juegos ganados, juegos perdidos. Se deberá mostrar tanto en valor absoluto como en porcentaje.
+
+3.    Salida: Permitirá salir del juego
+
+ 
+
+NOTA: Cualquier valor agregado es válido, siempre y cuando se respete los lineamientos básicos dados.

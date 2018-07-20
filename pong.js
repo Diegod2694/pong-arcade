@@ -24,9 +24,16 @@ var step = () => {
 };
 
 // Create gradient
-var background = context.createLinearGradient(0, 0, 200, 0);
-background.addColorStop(0, "orange");
-background.addColorStop(1, "rgb(84, 1, 122)");
+var background = context.createLinearGradient(width / 2, 0, width / 2, height);
+background.addColorStop(0, "#272264");
+background.addColorStop(0.5, "#0056B3");
+background.addColorStop(1, "#272264");
+// background.addColorStop(0, "#1E5799");
+// background.addColorStop(0.5, "#2989D8");
+// background.addColorStop(1, "#1E5799 ");
+// background.addColorStop(0, "#2989D8");
+// background.addColorStop(0.5, "#1E5799");
+// background.addColorStop(1, "#2989D8");
 
 // Fill with gradient
 context.fillStyle = background;
@@ -42,7 +49,7 @@ function Paddle(x, y, width, height) {
 }
 
 Paddle.prototype.render = function () {
-    context.fillStyle = "#0000FF";
+    context.fillStyle = "#FF4500";
     context.fillRect(this.x, this.y, this.width, this.height);
 };
 
@@ -73,7 +80,7 @@ function Ball(x, y) {
 Ball.prototype.render = function () {
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
-    context.fillStyle = "#66ff99";
+    context.fillStyle = "orange";
     context.fill();
 };
 
@@ -135,6 +142,10 @@ var keysDown = {};
 
 window.addEventListener("keydown", function (event) {
     keysDown[event.keyCode] = true;
+    if (event.keyCode === 27) {
+        window.location.href = "index.html";
+    }
+    console.log(event.keyCode)
 });
 
 window.addEventListener("keyup", function (event) {

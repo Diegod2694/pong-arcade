@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
     <link rel="icon" href="img/arcade_pong.png">
-    <script src="pong.js"></script>
+    <!-- <script src="pong.js"></script> -->
     <title>Arcade: The Pong Game!!!</title>
 </head>
 
@@ -17,7 +17,7 @@
         <div class="row marginless">
             <div class="col" align="center">
                 <div class="machine">
-                    <h1 class="arcade-tittle"> ARCADE </h1>
+                    <h1 class="arcade-title"> ARCADE </h1>
                     <h2 class="pong">The Pong Game</h2>
                 </div>
             </div>
@@ -25,7 +25,14 @@
     </div>
 
     <div class="pong-container" id="canvas-container">
-
+        <div class="menu">
+            <!-- <img src="img/arcade_pong.png" alt="imagen"> -->
+            <h1>Menu</h1>
+            <a href="play.html"><h3> <span>1.</span> Jugar</h3></a>
+            <a href="#"><h3><span>2.</span>Estadisticas</h3></a>
+            <a href="historia.html"><h3> <span>3.</span>Historia del Juego</h3></a>
+            <a href="autores.html"><h3> <span>4.</span>Autores</h3></a>
+        </div>
     </div>
 
 
@@ -35,6 +42,12 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
+    <script> window.addEventListener("keydown", function (event) {
+            if (event.keyCode === 13) {
+                window.location.href = "play.html";
+            }
+            console.log(event.keyCode)
+    });</script>
 </body>
 
 </html>
