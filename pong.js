@@ -3,6 +3,15 @@ var animate = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     function (callback) { window.setTimeout(callback, 1000 / 60) };
 
+var GameStore = {
+    player: {
+        score: 0
+    },
+    computer: {
+        score: 0
+    }
+}
+
 var canvas = document.createElement('canvas');
 var width = 400;
 var height = 600;
@@ -28,12 +37,6 @@ var background = context.createLinearGradient(width / 2, 0, width / 2, height);
 background.addColorStop(0, "#272264");
 background.addColorStop(0.5, "#0056B3");
 background.addColorStop(1, "#272264");
-// background.addColorStop(0, "#1E5799");
-// background.addColorStop(0.5, "#2989D8");
-// background.addColorStop(1, "#1E5799 ");
-// background.addColorStop(0, "#2989D8");
-// background.addColorStop(0.5, "#1E5799");
-// background.addColorStop(1, "#2989D8");
 
 // Fill with gradient
 context.fillStyle = background;
@@ -114,11 +117,24 @@ Ball.prototype.update = function (paddle1, paddle2) {
         this.x_speed = -this.x_speed;
     }
 
-    if (this.y < 0 || this.y > 600) { // a point was scored
+    if (this.y < 0) { // Punto de el jugador
         this.x_speed = 0;
         this.y_speed = 3;
         this.x = 200;
         this.y = 300;
+        GameStore.player.score++
+        console.log('Player: ', GameStore.player.score)
+        document.getElementById('player-score').innerHTML = GameStore.player.score
+    }
+
+    if (this.y > 600) { // Punto de la computadora
+        this.x_speed = 0;
+        this.y_speed = 3;
+        this.x = 200;
+        this.y = 300;
+        GameStore.computer.score++
+        console.log('Computer: ', GameStore.computer.score)
+        document.getElementById('computer-score').innerHTML = GameStore.computer.score
     }
 
     if (top_y > 300) {

@@ -140,3 +140,13 @@ body {
     padding: 20px;
     margin-bottom: 20px;
 }
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: mySecondFont;
+    color: white;
+    font-size: 20px;
+}
